@@ -6,7 +6,7 @@ import Home from "./components/Home";
 import Banner from "./components/Banner";
 import { useState } from "react";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter} from "react-router-dom";
 
 function App() {
   let [watchList, setWatchlist] = useState([]);
@@ -36,8 +36,9 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <NavBar />
+        {/* <Home /> */}
         <Routes>
           <Route
             path="/"
@@ -65,7 +66,7 @@ function App() {
             }
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
